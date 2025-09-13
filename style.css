@@ -1,0 +1,60 @@
+*,
+html {
+    padding: 0%;
+    margin: 0%;
+}
+
+.countanier {}
+
+.ul-navbar {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+}
+
+.li-navbar {
+    border: 1px solid rgb(252, 252, 252);
+    background-color: black;
+    list-style-type: none;
+    padding: 20px;
+    margin: 5px;
+    color: aliceblue;
+}
+
+.li-navbar:hover {
+    background-color: blue;
+    transition: .5s ease-in-out;
+    transition-delay: .2s;
+}
+
+.a-navbar {
+    color: aliceblue;
+    text-decoration: none ;
+}
+
+.countanier-content {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.img-content {
+width: 50%;
+height: 100%;
+}
+
+.countanier-footer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    font-size: 40px;
+    color: white;
+}
