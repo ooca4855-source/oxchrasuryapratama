@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Diri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --accent-color: #a29bfe;
+            --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --text-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        /* Dekorasi Background Bulat */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--accent-color);
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .circle-1 { width: 300px; height: 300px; top: -10%; left: -5%; }
+        .circle-2 { width: 250px; height: 250px; bottom: -5%; right: 5%; background: var(--primary-color); }
+
+        /* Card Utama */
+        .card {
+            background: var(--glass-bg);
+            width: 380px;
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            color: var(--text-color);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+            transform-style: preserve-3d;
+            transition: transform 0.1s ease;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            margin-bottom: 20px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .card:hover .profile-img {
+            transform: scale(1.1) translateZ(30px);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        /* Typing Effect Container */
+        .typing-text {
+            font-weight: 300;
+            color: var(--accent-color);
+            min-height: 25px;
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            opacity: 0.8;
+        }
+
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        .stat-item h4 { font-size: 1.1rem; }
+        .stat-item p { font-size: 0.7rem; text-transform: uppercase; color: var(--accent-color); }
+
+        /* Social Icons */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .btn-contact {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 30px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-contact:hover {
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.4);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+
+    <div class="card" id="card">
+        <img src="IMG-20251115-WA0026.jpg" alt="Foto Profil" class="profile-img">
+        
+        <h1>Oxchra Surya Pratama</h1>
+        <div class="typing-text" id="typing-effect"></div>
+        
+        <p class="bio">
+            Perkenalkan nama saya OxchraSuryaPratama bisa dipanggil Ocha. Hobby saya ada banyak volly, bermain motor, turing,dan mancing. saya masih pelajar yang sekoah di SMKN 1 Kertosono
+            saya lahir di Jombang,30 Maret 2009.  
+        </p>
+
+        <div class="stats">
+            <div class="stat-item">
+                <h4>XI RPL 2</h4>
+                <p>Kelas</p>
+            </div>
+            <div class="stat-item">
+                <h4>3 Thn</h4>
+                <p>Pengalaman</p>
+            </div>
+            <div class="stat-item">
+                <h4>85%</h4>
+                <p>Kreativitas</p>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/0chaa4_?igsh=OWRnMWZicW1tcmQ0"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/qr/X3CB64RFYMMZD1"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.tiktok.com/@ochaaaelahh?_r=1&_t=ZS-93G5EwYFcTF"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <a href="mailto:ooca4855@gmail.com" class="btn-contact">Hubungi Saya</a>
+    </div>
+
+    <script>
+        // --- 1. Efek Mengetik (Typing Animation) ---
+        const textElement = document.getElementById('typing-effect');
+        const phrases = ["Web Developer", "Desainer", "mecanichal"];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 150;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Jeda di akhir kata
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        // --- 2. Efek 3D Tilt Card ---
+        const card = document.getElementById('card');
+        const motionMatchMedia = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        document.addEventListener('mousemove', (e) => {
+            if (motionMatchMedia.matches) return;
+
+            const { clientX, clientY } = e;
+            const { innerWidth, innerHeight } = window;
+            
+            // Hitung pergerakan mouse relatif terhadap pusat layar
+            const rotateX = (innerHeight / 2 - clientY) / 20;
+            const rotateY = (clientX - innerWidth / 2) / 20;
+
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        // Reset posisi saat mouse keluar
+        document.addEventListener('mouseleave', () => {
+            card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+        });
+
+        // Jalankan fungsi typing
+        document.addEventListener('DOMContentLoaded', type);
+    </script>
+</body>
+</html>
